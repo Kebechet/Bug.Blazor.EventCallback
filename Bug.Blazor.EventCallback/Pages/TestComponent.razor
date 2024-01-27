@@ -1,0 +1,9 @@
+﻿@using System.Collections.ObjectModel
+@typeparam TValue where TValue : notnull
+
+<h3>TestComponent</h3>
+
+@code {
+    [Parameter] public ICollection<TValue> Values { get; set; } = new Collection<TValue>();
+    [Parameter] public EventCallback<ICollection<TValue>> ValuesChanged { get; set; }
+}

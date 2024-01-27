@@ -1,0 +1,8 @@
+﻿@page "/"
+@using System.Collections.ObjectModel
+
+<TestComponent TValue="int" @bind-Values="Values" />
+
+@code{
+    public ObservableCollection<int> Values { get; set; } = new(){1,2,3};
+}
